@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gaming Platform Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .icon-regular {
+            font-variation-settings: 'FILL' 0;
+        }
+        .neumorphic-inset {
+            box-shadow: inset 6px 6px 12px rgba(0,0,0,0.25), inset -6px -6px 12px rgba(255,255,255,0.08);
+        }
+        .neumorphic-outset {
+            box-shadow: 6px 6px 12px rgba(0,0,0,0.25), -6px -6px 12px rgba(255,255,255,0.08);
+        }
+        .neumorphic-outset-soft {
+             box-shadow: 4px 4px 8px rgba(0,0,0,0.2), -4px -4px 8px rgba(255,255,255,0.06);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#FF4D4D",
+              "background-light": "#FBEFEF",
+              "background-dark": "#201212",
+              "frame": "#3D1E2D",
+              "card": "#5A2A38"
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "1.5rem", "xl": "2.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col p-4 sm:p-6 lg:p-8">
+<div class="flex h-full w-full grow gap-6">
+<!-- Left Sidebar -->
+<nav class="hidden lg:flex flex-col items-center justify-between rounded-xl bg-frame p-6 neumorphic-outset">
+<div class="flex flex-col items-center gap-6">
+<a class="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-primary text-white neumorphic-outset-soft" href="#">
+<span class="material-symbols-outlined text-3xl">sports_esports</span>
+</a>
+<div class="flex flex-col items-center gap-4">
+<a class="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-card text-white/80 neumorphic-inset" href="#">
+<span class="material-symbols-outlined text-3xl icon-regular">home</span>
+</a>
+<a class="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-card text-white/80 neumorphic-inset" href="#">
+<span class="material-symbols-outlined text-3xl icon-regular">gamepad</span>
+</a>
+<a class="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-card text-white/80 neumorphic-inset" href="#">
+<span class="material-symbols-outlined text-3xl icon-regular">storefront</span>
+</a>
+<a class="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-card text-white/80 neumorphic-inset" href="#">
+<span class="material-symbols-outlined text-3xl icon-regular">card_giftcard</span>
+</a>
+<a class="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-card text-white/80 neumorphic-inset" href="#">
+<span class="material-symbols-outlined text-3xl icon-regular">chat_bubble</span>
+</a>
+<a class="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-card text-white/80 neumorphic-inset" href="#">
+<span class="material-symbols-outlined text-3xl icon-regular">notifications</span>
+</a>
+<a class="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-card text-white/80 neumorphic-inset" href="#">
+<span class="material-symbols-outlined text-3xl icon-regular">settings</span>
+</a>
+</div>
+</div>
+<button class="flex h-14 w-14 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-card text-white/80 neumorphic-inset">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 rounded-xl bg-frame p-6 md:p-8 flex flex-col gap-8 neumorphic-outset">
+<!-- Header -->
+<header class="flex flex-col md:flex-row items-center justify-between gap-4">
+<h1 class="text-white tracking-light text-[32px] font-bold leading-tight text-left">Good evening, NIKITIN</h1>
+<div class="flex w-full md:w-auto items-center gap-4">
+<label class="flex flex-col min-w-40 h-12 w-full max-w-xs">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full bg-card neumorphic-inset">
+<div class="text-white/60 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined icon-regular">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-white/90 focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-white/60 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search games..." value=""/>
+</div>
+</label>
+<button class="hidden sm:flex h-12 w-12 items-center justify-center rounded-full bg-card text-white/80 neumorphic-inset">
+<span class="material-symbols-outlined icon-regular">notifications</span>
+</button>
+<button class="hidden sm:flex h-12 w-12 items-center justify-center rounded-full bg-card text-white/80 neumorphic-inset">
+<span class="material-symbols-outlined icon-regular">settings</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 neumorphic-outset-soft" data-alt="User avatar NIKITIN" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFc8n5ePUfjmgmG5d4WWo9GqJUqYu4AWhqWgL9h87iXvIDb6XMKiFeat8r8i2d0crU7Mj1uG6tCy3rG548qiEoMzhVnFeK58vkkDYuwqw0i2U5z2wt-n_rDRcZYcACk6-54u0KQ8GAlm2Xvhk8xkbcnocpO0AahNmPy0Rr3Vo7P0bA1OmFiLA_zVtdRBCo5D8ubSiz8UDDvkp1meE229JA14fitfub0Ltxvd76bLO4F_w2XPIApGUd7cKXOEuBU3UDc7RfCxiYJ7xz");'></div>
+</div>
+</header>
+<!-- Content Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+<!-- Center Column -->
+<div class="xl:col-span-2 flex flex-col gap-8">
+<!-- Hero Card -->
+<div class="bg-cover bg-center flex flex-col items-stretch justify-end rounded-xl pt-[132px] neumorphic-outset-soft" data-alt="Promotional image for the game Valorant" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB5COWDlc80YbfcRVvaAEs0he5nW34dLdtOKKwK8_Z5G9nuw634QJFSrpaA_ruQaRnEOEQ8_RMLjggb4UxUFqbl-btZLsJzOM8lsFC-LL9m-WZlbgfRISEDGqnlbzBUIsnydok-M1A1uarfFxI83-_6FyOJ7dppKBVGGGMRsP-tDH3aJcf7aORg6Arvs4XaIaflIVL5JW7_-FdLLF2pNGFMsmyzKsTFyiqIIlu-N4DZXTTmANF8zyMuyk1f3Dus8UGEZxX4Y90-nDJa");'>
+<div class="flex w-full flex-col sm:flex-row items-start sm:items-end justify-between gap-4 p-6">
+<div class="flex max-w-[440px] flex-1 flex-col gap-1">
+<p class="text-[#F5DDAA] text-sm font-bold leading-normal bg-black/30 px-2 py-1 rounded-md self-start">Popular</p>
+<p class="text-white tracking-light text-3xl font-bold leading-tight max-w-[440px]">Valorant</p>
+<p class="text-white/80 text-base font-medium leading-normal">A 5v5 character-based tactical shooter where precise gunplay meets unique agent abilities.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] neumorphic-outset-soft">
+<span class="truncate">Play Now</span>
+</button>
+</div>
+</div>
+<!-- New Games Carousel -->
+<div class="flex flex-col gap-4">
+<h2 class="text-white text-2xl font-bold">New Games</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-card rounded-lg p-4 flex flex-col gap-3 neumorphic-outset-soft">
+<div class="bg-cover bg-center aspect-video rounded-md" data-alt="Game art for Uncharted 4" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBH5DVk7WgCV97vmGvmE6dq2tMRyEzt7LAgx6DJK1rN1J_lvMrdN9Xni22kQWvkMU8tDa-7i4dDAgpNBPdxfzxCISkMaR6CfSrwxEY5fqyxxbWLuHXSqkuQRDSW3NxMAzSb4JWKnWULhc3SsJClKIvXTKgmOQrvTqm25hTkCxqRVHfilCI3trIXGuaGSEXyEEKB0_9ukN4QSeizs2DEMclzfkTc6TvTUf3vjpPjHOsPqjlCtONINiJqwTJHz_ZRF_NshH9JrDOJniep");'></div>
+<p class="text-white font-bold text-lg">Uncharted 4</p>
+</div>
+<div class="bg-card rounded-lg p-4 flex flex-col gap-3 neumorphic-outset-soft">
+<div class="bg-cover bg-center aspect-video rounded-md" data-alt="Game art for Dishonored" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCvzl0FqDQna2_-fBF4Os76Gm0MKt6wRt9f0BQeLy5mmCUmB01qV7HGpSLeyYxpv6WPS8UMYZA7c-9eHFpoYw0mEt5bffePIU7KRNGPcfSlOAoyx65bJL2dwluCihd12sD7UN_kvPHoGFUvURyeq9y6aAv6lkrz5ZB0eYmOvOgZbvh5NKEpFX74cJcJsgL-kGNxS0xHzsiDaErwraCnw-pfSsbXRAZBp62T-WoYgFdIaC-bFiU75HtzV2ytZQa5i85ygKuhNI52I4-4");'></div>
+<p class="text-white font-bold text-lg">Dishonored</p>
+</div>
+<div class="bg-card rounded-lg p-4 flex flex-col gap-3 neumorphic-outset-soft">
+<div class="bg-cover bg-center aspect-video rounded-md" data-alt="Game art for Elden Ring" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBe7zYwcaS5tDkrDjN5b_WvF6_scPv_bc3j75Arw9aOJTDjnNgWBV_nrmUPr9DHlsDXNiGTRGgLxDEYBJJ5z_iOeo2gsfFLSPI2ACMGLUZsQwwHG-0IZLsmqsBfJNksEYUVPQeQWYEamMb-808g2cTOdTHQyIK9D8e5sVSHyDZlJRTqmqT772yVWJGn0kko86Sb6XZVnPAzbEC9VVZHpGWR3Sj9MvNHt3VRrqOB91wVeEk0Dk_WVEj2AzWF1W6zWdfb0-AuXv9fibXd");'></div>
+<p class="text-white font-bold text-lg">Elden Ring</p>
+</div>
+</div>
+</div>
+<!-- Last Downloads -->
+<div class="flex flex-col gap-4">
+<h2 class="text-white text-2xl font-bold">Last Downloads</h2>
+<div class="bg-card rounded-lg p-4 flex flex-col sm:flex-row items-center gap-4 neumorphic-outset-soft">
+<div class="bg-cover bg-center h-24 w-full sm:w-32 sm:h-20 rounded-md flex-shrink-0" data-alt="Game art for FIFA 23" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDA8OySAjDMQTJOl_I-ImCGl23Qd-J6FV4zkLdh9Q9-92B0UXzj9hREDCRGx8P-vceJCf3wi-RWESBr37zMjRQeNEomGKgmetIX4uvI7bV1Z8Dix4iIkiKzlu8iobC7iDRzzV41ieJXl_cfV3O4xqZO6bBTawgiwek3pRLKtg6PNfUmrN0rEY9YkEdbmq2cj7-OUSu2McNZz_0srmsypuzbfdftO85ewhMI_U3-zg5UOQIKt34_vTYd_PsNluSFNgjPhIe2gxAWICQ6");'></div>
+<div class="flex-1 w-full">
+<p class="text-white font-bold text-lg">FIFA 23</p>
+<div class="w-full bg-[#3D1E2D] rounded-full h-2.5 my-2">
+<div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
+</div>
+<p class="text-white/70 text-sm">75% complete - 24.5 GB / 32.7 GB</p>
+</div>
+<div class="flex gap-3 self-center sm:self-end">
+<button class="h-10 w-10 flex items-center justify-center rounded-full bg-[#3D1E2D] text-white neumorphic-inset"><span class="material-symbols-outlined">play_arrow</span></button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full bg-[#3D1E2D] text-white neumorphic-inset"><span class="material-symbols-outlined">close</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Rail -->
+<div class="xl:col-span-1 flex flex-col gap-8">
+<!-- Stats Card -->
+<div class="bg-card rounded-lg p-6 flex flex-col items-center gap-6 neumorphic-outset-soft">
+<h3 class="text-white text-xl font-bold self-start">Your Statistics</h3>
+<div class="relative flex items-center justify-center w-48 h-48">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 120 120">
+<circle cx="60" cy="60" fill="none" r="54" stroke="#3D1E2D" stroke-width="12"></circle>
+<circle cx="60" cy="60" fill="none" pathlength="339.29" r="54" stroke="#A495FF" stroke-dasharray="270" stroke-dashoffset="0" stroke-width="12"></circle>
+<circle cx="60" cy="60" fill="none" r="38" stroke="#3D1E2D" stroke-width="12"></circle>
+<circle cx="60" cy="60" fill="none" pathlength="238.76" r="38" stroke="#FF8C7A" stroke-dasharray="150" stroke-dashoffset="0" stroke-width="12"></circle>
+<circle cx="60" cy="60" fill="none" r="22" stroke="#3D1E2D" stroke-width="12"></circle>
+<circle cx="60" cy="60" fill="none" pathlength="138.23" r="22" stroke="#F5DDAA" stroke-dasharray="80" stroke-dashoffset="0" stroke-width="12"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<p class="text-white text-2xl font-black">12,340h</p>
+<p class="text-white/70 text-sm">Total Playtime</p>
+</div>
+</div>
+<div class="flex flex-wrap justify-center gap-2">
+<div class="flex items-center gap-2 bg-[#3D1E2D] text-white text-sm font-medium py-1 px-3 rounded-full"><div class="w-2 h-2 rounded-full bg-[#A495FF]"></div>Valorant</div>
+<div class="flex items-center gap-2 bg-[#3D1E2D] text-white text-sm font-medium py-1 px-3 rounded-full"><div class="w-2 h-2 rounded-full bg-[#FF8C7A]"></div>FIFA 23</div>
+<div class="flex items-center gap-2 bg-[#3D1E2D] text-white text-sm font-medium py-1 px-3 rounded-full"><div class="w-2 h-2 rounded-full bg-[#F5DDAA]"></div>Elden Ring</div>
+</div>
+</div>
+<!-- Friends & Voice -->
+<div class="bg-card rounded-lg p-6 flex flex-col gap-6 neumorphic-outset-soft">
+<h3 class="text-white text-xl font-bold">Friends Online</h3>
+<div class="flex items-center -space-x-4">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-[#5A2A38]" data-alt="User avatar 1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCWUhmOA6w7X1d5fLb0uX9uQv5S_0c30_yTl1cn9QSrzTGYUXTmEGg0ZKo6tj5FopntEFjUQYUXBx39d6qOUY4K8ig955fmVhcxNboWOpefNwAhKPlbN9_bo3DlkOnx43HUI3RKxFUWReKBBtdKxlCtFcsideWewtFuWEYPeSk7mJBQZIqajIiQ4RGnwJFiMnkQNlESkNU5moPBHle-4OemKaNS4Gg0uyV8JJBnriYKsEjygGBBlKcRgWoXsqr8rIHmEQTq63VwGYYO");'></div>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-[#4CAF50] ring-2 ring-[#5A2A38]"></span>
+</div>
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-[#5A2A38]" data-alt="User avatar 2" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDh1ElensxM_6Rea5aGopxtOAfSGcbKcsXqs4WlKBfZRzBpCooQezA5QdNlMqy-OeCFqCKDyvlYCuDutY5W6Fb2gyOwHFjV1NCrRZQLVfSrM-aqDZlzviyHDCQm0PMPyIqhPLp4SJROPBb2bAohLts6ovXQrrPK6a2T9wYerIh0GTOLWbGuuSmu236FmaoO9OLzitfRODJCzVDNNM33vIi6jBlpIcSeSA5Ia831Y58SUxMZ2Jg79Sabk21XIzjYPTtCoTfPrNzxv1pO");'></div>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-[#4CAF50] ring-2 ring-[#5A2A38]"></span>
+</div>
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-[#5A2A38]" data-alt="User avatar 3" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWNDyC32pbo4Gcla0Yh9HFJ4gIZVMY6c5tKhGR0LD7SE3bNQKcfqA2KUgr7iYMDx8DtTbryj196fXutftH6aC_ysOHrmXv0mEBJbwZBGhETx6xf6GDEYx3AQrvvmJnVPfjBBlRT6g-mW3k4zF3coJF5ykAzpowC_EmMURhAZyBDb8L5VuuEU7OSxBitrhrmNypj0b_dIjjY4auIceTYCWC26h4pW0bFaZQp4HfwaZeSQdfbAW7pqaWyQm_ONX-7ljtzeth5lwdLgKq");'></div>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-[#4CAF50] ring-2 ring-[#5A2A38]"></span>
+</div>
+<div class="flex items-center justify-center size-12 rounded-full bg-[#3D1E2D] text-white text-sm font-bold border-2 border-[#5A2A38]">+5</div>
+</div>
+<div class="w-full h-px bg-white/10"></div>
+<div class="flex justify-between items-center bg-[#3D1E2D] p-3 rounded-lg">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar NIKITIN" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_qkadmTTcU2bnkw8XcquZHu0-XhkbY20OdT5rX0l4QUd0iImfpo_feD5A-lCMd1MKnKtFSF4LWOLt8OzIMhbKuMR0PlPU3xIcih_ge6TSuuYOLGzSR1iUMkEX5CyKg1NjGKNknfDzZLF6Zzg7OyY7IJ79F-lgNvekLZKss9kdIKnKny3ubw7-g3pzbTUdsmBpr5Vky22h18mVyDdUypvVLpv6D5ZCxwlZnLXAQ7ELyPfoAFlhS0EKx1KhRHBOqjLX3OsYmfB6rjIS");'></div>
+<div>
+<p class="text-white font-bold">NIKITIN</p>
+<p class="text-green-400 text-sm">Voice Connected</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="h-10 w-10 flex items-center justify-center rounded-full bg-card text-white neumorphic-inset"><span class="material-symbols-outlined">mic</span></button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full bg-card text-white neumorphic-inset"><span class="material-symbols-outlined">headset</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>
